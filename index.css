@@ -27,6 +27,7 @@ header{
     
 }
 
+/* =>Logo styling<= */
 
 .header-contents{
     display:flex;
@@ -55,6 +56,8 @@ header{
     font-size:0.75rem;
     margin: 0;
 }
+
+
 
 
 
