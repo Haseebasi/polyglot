@@ -1,2 +1,60 @@
 /* font-family: "Big Shoulders", sans-serif; */
  /* font-family: "Poppins", sans-serif; */
+* *::after *::before {
+    box-sizing:border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    margin:0;
+}
+
+/* ==========================================================
+                         Header section
+    =========================================================*/
+
+
+header{
+    width:100%;
+    height:15%;
+    background: #eb01a5;
+    background-image: url("assets/worldmap.png"), linear-gradient(to right,#eb01a5, #d13531);
+    text-align:center;
+    display:flex;
+    align-items :center;
+    justify-content:center;
+    padding:50px 0;
+    
+}
+
+
+.header-contents{
+    display:flex;
+    
+}
+.logo-img{
+    height: 100%;
+    width:100px;
+    /* margin: 0; */
+}
+.header-text{
+    text-align: left;
+    margin-left: 1em;
+}
+.app-title{
+    color:#32CD32;
+    font-size:3rem;
+    font-weight: 900;
+    font-family: "Big Shoulders", sans-serif;
+    margin: 0;
+    -webkit-text-stroke: 1px black;
+}
+.header-description{
+    font-weight:500;
+    color:white;
+    font-size:0.75rem;
+    margin: 0;
+}
+
+
+
