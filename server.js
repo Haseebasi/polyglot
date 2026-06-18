@@ -29,3 +29,4 @@ const response = await openai.chat.completions.create({
 
 
 // response.choices[0].message.content
+const PORT = 3000
