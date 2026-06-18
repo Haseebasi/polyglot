@@ -86,10 +86,10 @@ h2{
     font-size: 1.25rem;
     color:#035A9D;
 }
-.user-input,.form-btn,.radio-grp{
+textarea,.form-btn,.radio-grp{
     width: 100%;
 }
-.user-input{
+textarea{
     height: 130px;
     border: none;
     border-radius: 10px;
