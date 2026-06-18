@@ -58,7 +58,7 @@ function getTranslation(text,lang){
   } catch (error) {
     console.error(error);
     aiOutput.textContent =
-      "Sorry, I can't Translate now Try again later";
+      "Sorry, I can't Translate now ,Try again later";
   } finally {
     setLoading(false);
   }
