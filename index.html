@@ -18,7 +18,7 @@
             </section>
         </header>
         <main>
-            <form>
+            <form class="first-form" id="second-form">
 
                 <label for="user-input"><h2 class="form-head">Text to translate 👇</h2></label>
                 <textarea type="text" id="user-input" class="user-input"></textarea>
@@ -29,15 +29,24 @@
                 <section class="radio-grp">
                     
                 <div class="radio-btn"><input type="radio" name="choose-language" value="French" id="french">
-                <label for="french" >French</label></div>
+                <label for="french" >French <img src="assets\fr-flag.png" class="radio-label-img"></label></div>
                 <div class="radio-btn"><input type="radio" name="choose-language" value="Spanish" id="spanish">
-                <label for="spanish">Spanish</label></div>
+                <label for="spanish">Spanish <img src="assets\sp-flag.png" class="radio-label-img"></label></div>
                 <div class="radio-btn"><input type="radio" name="choose-language" value="Japanese" id="japanese">
-                <label for="japanese">Japanese</label></div>
+                <label for="japanese">Japanese <img src="assets\jpn-flag.png" class="radio-label-img"></label></div>
                 </section>
                 
                 <button class="form-btn" type="submit">Translate</button>
 
+            </form>
+            <form class="second-form hide" id="second-form">
+                 <label for="user-input"><h2 class="form-head">Original Text 👇</h2></label>
+                <textarea type="text" id="user-input" class="user-input"></textarea>
+
+                <h2 class="form-head">Your translation 👇</h2>
+                <textarea type="text" id="user-input" class="user-input" readonly></textarea>
+
+                <button class="form-btn" type="submit">Start over</button>
             </form>
         </main>
         <!-- Your HTML here -->
