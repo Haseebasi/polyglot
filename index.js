@@ -1,11 +1,11 @@
 const inputForm = document.getElementById('input-form')
 const outputForm = document.getElementById('output-form')
 const userInput = document.getElementById('user-input')
-const aiOutput = document.getElementById('ai-input')
+const aiOutput = document.getElementById('ai-output')
 // const langRadio = document.getquerySelectorAll('input[name="choose-language"]:checked')
 // const langValue = langRadio.value
 
-function inputFormHandler(){
+await function inputFormHandler(){
     const french = document.getElementById("french")
         const spanish = document.getElementById("spanish")
         const japanese = document.getElementById("japanese")
@@ -24,7 +24,7 @@ function inputFormHandler(){
         console.log(userInput.value)
         console.log(langValue)
 
-        getTranslation(userInput.value,langValue)
+        await getTranslation(userInput.value,langValue)
 
         inputForm.classList.add('hide')
         outputForm.classList.remove('hide')
@@ -34,11 +34,11 @@ function inputFormHandler(){
         alert('input some text')
      }
 }
-function getTranslation(text,lang){
+async function getTranslation(text,lang){
       setLoading(true);
   try {
     const gift = await fetch('/api/translate',{
-      method:"post",
+      method:"POST",
       headers:
         {
           "content-type":"application/json"
@@ -55,12 +55,14 @@ function getTranslation(text,lang){
     const safeHTML = DOMPurify.sanitize(html);
 
     aiOutput.innerHTML = safeHTML;
+    return  true
   } catch (error) {
     console.error(error);
     aiOutput.textContent =
       "Sorry, I can't Translate now ,Try again later";
+      return false
   } finally {
-    setLoading(false);
+    if (typeof setLoading === 'function') setLoading(false);
   }
 }
 
